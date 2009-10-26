@@ -9,7 +9,7 @@ namespace Kona.ViewModels {
 
         public IEnumerable<Category> ParentCategories {
             get {
-                return Categories.Where(x => x.ParentID == 0);
+                return Categories.Where(x => x.Parent == null);
             }
         }
         public IEnumerable<Category> Categories { get; set; }

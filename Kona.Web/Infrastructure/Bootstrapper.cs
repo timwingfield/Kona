@@ -15,7 +15,6 @@ using StructureMap.Configuration;
 using StructureMap.Attributes;
 using StructureMap.Pipeline;
 using Kona.Model;
-using Kona.App.Repositories;
 using NHibernate;
 using Kona;
 
@@ -30,8 +29,8 @@ namespace Commerce.MVC.Web {
     public class StoreRegistry : Registry {
         protected override void configure() {
             
-            ForRequestedType<IStoreRepository>()
-                .TheDefaultIsConcreteType<LinqRepository>();
+            //ForRequestedType<IStoreRepository>()
+            //    .TheDefaultIsConcreteType<LinqRepository>();
 
             ForRequestedType<ISession>()
                 .TheDefault.Is.ConstructedBy(x => MvcApplication.SessionFactory.GetCurrentSession());

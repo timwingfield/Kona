@@ -13,20 +13,22 @@ namespace Kona.Model {
         public Category(string name) {
             Name = name;
             SubCategories = new List<Category>();
+            Products = new HashSet<Product>();
         }
 
 
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public int ParentID { get; set; }
-        public bool IsDefault { get; set; }
-        public IList<Category> SubCategories { get; set; }
+        public virtual int ID { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Description { get; set; }
+        public virtual Category Parent { get; set; }
+        public virtual bool IsDefault { get; set; }
+        public virtual ICollection<Category> SubCategories { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
         #region object overrides
         public override bool Equals(object obj) {
             if (obj is Category) {
                 Category compareTo = (Category)obj;
-                return compareTo.Name.Equals(this.Name, StringComparison.InvariantCultureIgnoreCase);
+                return compareTo.ID.Equals(this.ID);
             } else {
                 return base.Equals(obj);
             }
@@ -36,7 +38,7 @@ namespace Kona.Model {
             return this.Name;
         }
         public override int GetHashCode() {
-            return this.Name.GetHashCode();
+            return this.ID.GetHashCode();
         }
         #endregion
 

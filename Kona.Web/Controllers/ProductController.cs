@@ -15,8 +15,8 @@ namespace Kona.Controllers
 
         StoreService _service;
 
-        public ProductController(IStoreRepository repository) {
-            _service = new StoreService(repository);
+        public ProductController() {
+
         }
         
         //
@@ -24,14 +24,15 @@ namespace Kona.Controllers
 
         public ActionResult Index(int? id)
         {
-            ProductListViewModel model=null;
-            //if an ID is sent in it's a category
-            if (id.HasValue) {
-                model = _service.GetCategoryModel((int)id);
-            } else {
-                RedirectToAction("Index", "Home");
-            }
-            return View(model);
+            //ProductListViewModel model=null;
+            ////if an ID is sent in it's a category
+            //if (id.HasValue) {
+            //    model = _service.GetCategoryModel((int)id);
+            //} else {
+            //    RedirectToAction("Index", "Home");
+            //}
+            //return View(model);
+            return Content("Success");
         }
 
         //
@@ -40,8 +41,8 @@ namespace Kona.Controllers
         public ActionResult Details(string id)
         {
 
-            var model = _service.GetDetails(id);
-            return View(model);
+            //var model = _service.GetDetails(id);
+            return View();
         }
 
         //

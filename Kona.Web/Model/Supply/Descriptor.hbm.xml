@@ -3,9 +3,9 @@
 				   assembly="Kona"
 				   namespace="Kona.Model">
 	<class name="Descriptor"
-		   table="ProductDescriptors" lazy="false">
+		   table="ProductDescriptors" >
 
-		<id name="DescriptorID">
+		<id column="DescriptorID" type="System.Int32">
 			<generator class="identity"/>
 		</id>
 		<property name="Title" not-null="true"/>

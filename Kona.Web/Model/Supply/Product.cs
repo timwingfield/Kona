@@ -23,45 +23,35 @@ namespace Kona.Model {
     
     public class Product {
 
+        public virtual string SKU { get; set; }
+        public virtual string Name { get; set; }
+        public virtual decimal Price { get; set; }
+        public virtual decimal DiscountPercent { get; set; }
+        public virtual string Manufacturer { get; set; }
+        public virtual DeliveryMethod Delivery { get; set; }
+        public virtual decimal WeightInPounds { get; set; }
+        public virtual bool IsTaxable { get; set; }
+        public virtual InventoryStatus Inventory { get; set; }
+        public virtual bool AllowBackOrder { get; set; }
+        public virtual bool AllowPreOrder { get; set; }
+        public virtual string EstimatedDelivery { get; set; }
+        public virtual string DefaultImage { get; set; }
+        public virtual DateTime DateAvailable { get; set; }
+        public virtual int AmountOnHand { get; set; }
 
-
-        public Product() {
-        }        
-
-        public static Product New(string sku, string name, decimal price) {
-            var result = new Product();
-            result.SKU = sku;
-            result.Name = name;
-            result.Price = price;
-            return result;
-        }
-
-        public string SKU { get; set; }
-        public string Name { get; set; }
-        public decimal Price { get; set; }
-        public decimal DiscountPercent { get; set; }
-        public string Manufacturer { get; set; }
-        public DeliveryMethod Delivery { get; set; }
-        public decimal WeightInPounds { get; set; }
-        public bool IsTaxable { get; set; }
-        public InventoryStatus Inventory { get; set; }
-        public bool AllowBackOrder { get; set; }
-        public string EstimatedDelivery { get; set; }
-        public string DefaultImage { get; set; }
-        public decimal DiscountedPrice
+        public virtual decimal DiscountedPrice
         {
             get { return Price * (1.0M - DiscountPercent); } 
         }
 
 
-        //TODO: These should be readonly
-        public IQueryable<Image> Images { get; set; }
-        public IQueryable<Product> Related { get; set; }
-        public IQueryable<Product> CrossSells { get; set; }
-        public IQueryable<Descriptor> Descriptors { get; set; }
-        public IQueryable<Product> Recommended { get; set; }
-        public IQueryable<Category> Categories { get; set; }
-        public IQueryable<InventoryRecord> InventoryRecords { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
+        public virtual ICollection<Product> Related { get; set; }
+        public virtual ICollection<Product> CrossSells { get; set; }
+        public virtual ICollection<Descriptor> Descriptors { get; set; }
+        public virtual ICollection<Product> Recommended { get; set; }
+        public virtual ICollection<Category> Categories { get; set; }
+        public virtual ICollection<InventoryRecord> InventoryRecords { get; set; }
         
         #region Object overrides
         public override bool Equals(object obj) {

@@ -4,14 +4,22 @@
 				   namespace="Kona.Model">
 	
 	<class name="Category"
-		   table="Categories" lazy="false">
+		   table="Categories" >
 
-		<id name="CategoryID">
+		<id name="ID" column="CategoryID">
 			<generator class="identity"/>
 		</id>
 		<property name="Name" not-null="true"/>
 		<property name="IsDefault" not-null="true" />
         <property name="Description" not-null="true" />
-        <property name="ParentID" />
+        <many-to-one name="Parent" column="ParentID"></many-to-one>
+        <bag name="SubCategories" inverse="true">
+            <key column="ParentID"></key>
+            <one-to-many class="Category"/>
+        </bag>
+        <set name="Products" table="Categories_Products">
+            <key column="CategoryID"></key>
+            <many-to-many column="SKU" class="Product"></many-to-many>
+        </set>
     </class>
 </hibernate-mapping>

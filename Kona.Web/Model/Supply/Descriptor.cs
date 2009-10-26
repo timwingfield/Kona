@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Kona.Model {
+﻿namespace Kona.Model {
     public class Descriptor {
-        public string Title { get; set; }
-        public string Body { get; set; }
+        public virtual string Title { get; set; }
+        public virtual string Body { get; set; }
 
     }
 }

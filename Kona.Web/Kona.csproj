@@ -108,12 +108,6 @@
     <Compile Include="Infrastructure\Bootstrapper.cs" />
     <Compile Include="Infrastructure\KonaControllerFactory.cs" />
     <Compile Include="Infrastructure\KonaViewEngine.cs" />
-    <Compile Include="Repositories\LinqRepository.cs" />
-    <Compile Include="Repositories\LinqToStore.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>LinqToStore.dbml</DependentUpon>
-    </Compile>
     <Compile Include="Services\StoreService.cs" />
     <Compile Include="ViewModels\DetailsViewModel.cs" />
     <Compile Include="ViewModels\ProductListViewModel.cs" />
@@ -133,7 +127,6 @@
     <Compile Include="Model\Order\OrderItem.cs" />
     <Compile Include="Model\Order\PaymentMethod.cs" />
     <Compile Include="Model\Order\Transaction.cs" />
-    <Compile Include="Repositories\IStoreRepository.cs" />
     <Compile Include="Model\Supply\Category.cs" />
     <Compile Include="Model\Supply\Descriptor.cs" />
     <Compile Include="Model\Supply\Image.cs" />
@@ -382,11 +375,6 @@
     <Content Include="Content\images\icon_cart.gif" />
     <Content Include="Content\images\logo.gif" />
     <Content Include="Content\images\placeholder.png" />
-    <None Include="Repositories\LinqToStore.dbml">
-      <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>LinqToStore.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Content\css\plugins\buttons\Readme" />
     <None Include="Content\css\plugins\css-classes\Readme" />
     <None Include="Content\css\plugins\fancy-type\Readme" />
@@ -401,12 +389,10 @@
     <EmbeddedResource Include="Model\Supply\Product.hbm.xml" />
     <None Include="nhibernate-configuration.xsd" />
     <None Include="nhibernate-mapping.xsd" />
-    <None Include="Repositories\LinqToStore.dbml.layout">
-      <DependentUpon>LinqToStore.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />

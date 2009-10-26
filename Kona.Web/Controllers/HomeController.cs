@@ -15,19 +15,24 @@ namespace Kona.Controllers
         StoreService _service;
         ISession _session;
 
-        public HomeController(ISession session,
-            IStoreRepository repository) {
+        public HomeController(ISession session) {
             _session = session;
-            _service = new StoreService(repository);
+            _service = new StoreService(session);
         }
 
         public ActionResult Index()
         {
 
-            var product = _session.Get<Product>("Backpack1");
+            var stuff = _session.CreateCriteria<Category>()
+                .List<Category>();
+            
+            foreach (var cat in stuff) {
+                var products = cat.Products.Count;
+            }
+
 
             var model = _service.GetHomeModel();
-
+            //return Content("Success");
             return View(model);
         }
 
