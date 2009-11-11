@@ -12,24 +12,14 @@ namespace Kona.Controllers
     [HandleError]
     public class HomeController : Controller
     {
-        StoreService _service;
-        ISession _session;
+        IStoreService _service;
 
-        public HomeController(ISession session) {
-            _session = session;
-            _service = new StoreService(session);
+        public HomeController(IStoreService service) {
+            _service = service;
         }
 
         public ActionResult Index()
         {
-
-            var stuff = _session.CreateCriteria<Category>()
-                .List<Category>();
-            
-            foreach (var cat in stuff) {
-                var products = cat.Products.Count;
-            }
-
 
             var model = _service.GetHomeModel();
             //return Content("Success");

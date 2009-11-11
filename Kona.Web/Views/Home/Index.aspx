@@ -49,7 +49,7 @@
         
         <!--Product widget with 1 product-->
         <div class="prodWidget">
-        <%var featured = Model.FeaturedProducts.Take(1).SingleOrDefault(); %>
+        <%var featured = Model.FeaturedProduct; %>
             <h4>
                 Featured</h4>
             <hr />
@@ -81,7 +81,7 @@
         <div class="prodWidget">
             <h4>Blowout Specials</h4>
             <hr />
-            <%foreach (Product p in Model.FeaturedProducts.Skip(1).Take(3)) { %>
+            <%foreach (var p in Model.FeaturedProducts) { %>
             <div class="fltleft prodItem">
            
                 <a href="<%=Url.Action("Details","Product",new {id=p.SKU}) %>"><img src="/content/productimages/<%=p.DefaultImage %>" alt="<%=p.Name %>" width="115" height="115" /></a>

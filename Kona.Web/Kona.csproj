@@ -47,9 +47,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\DotNetOpenAuth.dll</HintPath>
     </Reference>
-    <Reference Include="HibernatingRhinos.NHibernate.Profiler.Appender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0774796e73ebf640, processorArchitecture=MSIL">
+    <Reference Include="HibernatingRhinos.Profiler.Appender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0774796e73ebf640, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\lib\HibernatingRhinos.NHibernate.Profiler.Appender.dll</HintPath>
+      <HintPath>..\..\..\@Apps\NHProf\HibernatingRhinos.Profiler.Appender.dll</HintPath>
     </Reference>
     <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -66,6 +66,10 @@
     <Reference Include="NHibernate.ByteCode.Castle, Version=2.1.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.LambdaExtensions, Version=1.0.8.0, Culture=neutral, PublicKeyToken=706dcfc1e2725d62, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\lib\NHibernate.LambdaExtensions.dll</HintPath>
     </Reference>
     <Reference Include="NHibernate.Linq, Version=1.0.0.4000, Culture=neutral, PublicKeyToken=444cf6a87fdab271, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -105,9 +109,17 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
+    <Compile Include="Helpers\NHibExtensions.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Infrastructure\Bootstrapper.cs" />
     <Compile Include="Infrastructure\KonaControllerFactory.cs" />
     <Compile Include="Infrastructure\KonaViewEngine.cs" />
+    <Compile Include="Model\Supply\Inventory\Discontinued.cs" />
+    <Compile Include="Model\Supply\Inventory\InStock.cs" />
+    <Compile Include="Model\Supply\Inventory\InventoryState.cs" />
+    <Compile Include="Model\Supply\Inventory\BackOrdered.cs" />
+    <Compile Include="Model\Supply\Inventory\PreOrder.cs" />
     <Compile Include="Services\StoreService.cs" />
     <Compile Include="ViewModels\DetailsViewModel.cs" />
     <Compile Include="ViewModels\ProductListViewModel.cs" />
@@ -391,7 +403,6 @@
     <None Include="nhibernate-mapping.xsd" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Repositories\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

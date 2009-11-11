@@ -1,14 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using Kona.Helpers;
 using Kona.Model;
 using Kona.ViewModels;
 using NHibernate;
 using NHibernate.Linq;
+using NHibernate.Criterion;
+using NHibernate.LambdaExtensions;
 
 namespace Kona.App.Services {
-    public class StoreService {
+    public interface IStoreService{
+        ProductListViewModel GetHomeModel();
+    }
+
+    public class StoreService : IStoreService{
 
         ISession _session;
         public StoreService(ISession session) {
@@ -39,36 +44,44 @@ namespace Kona.App.Services {
 
 //        }
         public ProductListViewModel GetHomeModel() {
+
             var result = new ProductListViewModel();
-
             //add the featured product
-            result.FeaturedProducts = _session.Linq<Product>()
-                .Where(x => x.Categories.Any(c => c.ID == 33));
-
-                //_session.CreateQuery("select p from Category c join c.Products p where c.Id = :categoryID")
-                //.SetParameter("categoryID", 33).List<Product>();
 
             //categories
-            result.Categories = _session.Linq<Category>();
+            result.Categories = _session
+                .CreateCriteria<Category>()
+                .Future<Category>();
+
+
+            var featuredProduct = _session
+                .CreateCriteria<Product>()
+                .SetFetchMode<Product>(x=>x.Descriptors,FetchMode.Join)
+                .CreateCriteria<Product>(x=>x.Categories)
+                .Add<Category>(x=>x.ID==33)                 
+                .Future<Product>();
+
+            result.FeaturedProduct = featuredProduct.First();
+            result.FeaturedProducts = featuredProduct.Skip(1).Take(3).ToList();
+
 
 
             return result;
 
-
         }
 
-//        public DetailsViewModel GetDetails(string sku) {
-//            var result = new DetailsViewModel();
-//            //categories
-//            result.Categories = _repo.GetCategories();
+        //        public DetailsViewModel GetDetails(string sku) {
+        //            var result = new DetailsViewModel();
+        //            //categories
+        //            result.Categories = _repo.GetCategories();
 
-//            //organize them
-//            result.Categories.ToList().ForEach(x => x.SubCategories = result.Categories.Where(y => y.ParentID == x.ID).ToList());
+        //            //organize them
+        //            result.Categories.ToList().ForEach(x => x.SubCategories = result.Categories.Where(y => y.ParentID == x.ID).ToList());
 
-//            result.SelectedProduct = _repo.GetProduct(sku);
+        //            result.SelectedProduct = _repo.GetProduct(sku);
 
-//            return result;
+        //            return result;
 
-//        }
-   }
+        //        }
+    }
 }

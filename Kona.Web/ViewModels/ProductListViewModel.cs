@@ -13,9 +13,10 @@ namespace Kona.ViewModels {
             }
         }
         public IEnumerable<Category> Categories { get; set; }
-        public IEnumerable<Product> FeaturedProducts { get; set; }
-        public IEnumerable<Product> Recent { get; set; }
-        public IEnumerable<Product> Favorite { get; set; }
+        public IList<Product> FeaturedProducts { get; set; }
+        public Product FeaturedProduct { get; set; }
+        public IList<Product> Recent { get; set; }
+        public IList<Product> Favorite { get; set; }
         public Category SelectedCategory { get; set; }
         public Category HomeCategory {
             get {

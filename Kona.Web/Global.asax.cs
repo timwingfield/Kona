@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using HibernatingRhinos.Profiler.Appender.NHibernate;
 using Kona.App.Infrastructure;
 using Commerce.MVC.Web;
 using NHibernate;
 using NHibernate.Cfg;
 using System.IO;
 using NHibernate.Context;
-using HibernatingRhinos.NHibernate.Profiler.Appender;
+
 
 namespace Kona
 {

@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Iesi.Collections.Generic;
+using Kona.Model.Supply.Inventory;
 
 namespace Kona.Model {
     
@@ -31,27 +33,24 @@ namespace Kona.Model {
         public virtual DeliveryMethod Delivery { get; set; }
         public virtual decimal WeightInPounds { get; set; }
         public virtual bool IsTaxable { get; set; }
-        public virtual InventoryStatus Inventory { get; set; }
         public virtual bool AllowBackOrder { get; set; }
         public virtual bool AllowPreOrder { get; set; }
         public virtual string EstimatedDelivery { get; set; }
         public virtual string DefaultImage { get; set; }
         public virtual DateTime DateAvailable { get; set; }
         public virtual int AmountOnHand { get; set; }
-
+        public virtual InventoryState Inventory { get; set; }
         public virtual decimal DiscountedPrice
         {
             get { return Price * (1.0M - DiscountPercent); } 
         }
 
 
-        public virtual ICollection<Image> Images { get; set; }
-        public virtual ICollection<Product> Related { get; set; }
-        public virtual ICollection<Product> CrossSells { get; set; }
         public virtual ICollection<Descriptor> Descriptors { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
         public virtual ICollection<Product> Recommended { get; set; }
-        public virtual ICollection<Category> Categories { get; set; }
-        public virtual ICollection<InventoryRecord> InventoryRecords { get; set; }
+        
+        public virtual ISet<Category> Categories { get; set; }
         
         #region Object overrides
         public override bool Equals(object obj) {
