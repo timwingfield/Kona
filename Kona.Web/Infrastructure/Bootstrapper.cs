@@ -14,7 +14,7 @@ namespace Commerce.MVC.Web {
 
     public class StoreRegistry : Registry {
         protected override void configure() {
-            
+             
             //ForRequestedType<IStoreRepository>()
             //    .TheDefaultIsConcreteType<LinqRepository>();
 
