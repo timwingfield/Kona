@@ -113,13 +113,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Infrastructure\Bootstrapper.cs" />
+    <Compile Include="Infrastructure\InventoryStateType.cs" />
     <Compile Include="Infrastructure\KonaControllerFactory.cs" />
     <Compile Include="Infrastructure\KonaViewEngine.cs" />
-    <Compile Include="Model\Supply\Inventory\Discontinued.cs" />
     <Compile Include="Model\Supply\Inventory\InStock.cs" />
     <Compile Include="Model\Supply\Inventory\InventoryState.cs" />
     <Compile Include="Model\Supply\Inventory\BackOrdered.cs" />
-    <Compile Include="Model\Supply\Inventory\PreOrder.cs" />
     <Compile Include="Services\StoreService.cs" />
     <Compile Include="ViewModels\DetailsViewModel.cs" />
     <Compile Include="ViewModels\ProductListViewModel.cs" />

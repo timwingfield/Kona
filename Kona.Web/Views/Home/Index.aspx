@@ -11,7 +11,6 @@
           <%foreach (Category c in Model.ParentCategories) { %>
             <li class="first"><a href="<%=Url.Action("Index","Product",new {id=c.ID}) %>" title="<%=c.Description %>"><%=c.Name %></a></li>
           <%} %>
-
     </ul>
     </div>
 <div id="bdy" class="leftNav">

@@ -7,6 +7,7 @@ using NHibernate;
 using NHibernate.Linq;
 using NHibernate.Criterion;
 using NHibernate.LambdaExtensions;
+using NHibernate.Transform;
 
 namespace Kona.App.Services {
     public interface IStoreService{
@@ -53,19 +54,23 @@ namespace Kona.App.Services {
                 .CreateCriteria<Category>()
                 .Future<Category>();
 
-
+            
             var featuredProduct = _session
                 .CreateCriteria<Product>()
                 .SetFetchMode<Product>(x=>x.Descriptors,FetchMode.Join)
                 .CreateCriteria<Product>(x=>x.Categories)
-                .Add<Category>(x=>x.ID==33)                 
+                .Add<Category>(x=>x.ID==33) 
+                .SetResultTransformer(Transformers.DistinctRootEntity)
                 .Future<Product>();
 
             result.FeaturedProduct = featuredProduct.First();
             result.FeaturedProducts = featuredProduct.Skip(1).Take(3).ToList();
 
-
-
+            _session.BeginTransaction();
+            var p1 = result.FeaturedProducts.SingleOrDefault(x => x.SKU == "Boots3");
+            p1.AmountOnHand = 1;
+            p1.Inventory.AddToBasket(p1);
+            _session.Transaction.Commit();
             return result;
 
         }

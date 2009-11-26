@@ -19,6 +19,7 @@
         <property name="AmountOnHand" column="AmountOnHand" not-null="true" />
         <property name="AllowPreOrder" column="AllowPreOrder" not-null="true" />
         <property name="Delivery" column="DeliveryMethodID" not-null="true" />
+        <property name="Inventory" type="Kona.Infrastructure.InventoryStateType, Kona" column="InventoryStatusID"></property>
         <bag name="Descriptors" >
             <key column="SKU"></key>
             <one-to-many class="Descriptor"/>

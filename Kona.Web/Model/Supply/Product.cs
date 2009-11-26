@@ -7,14 +7,7 @@ using Kona.Model.Supply.Inventory;
 
 namespace Kona.Model {
     
-    public enum InventoryStatus {
-        InStock=1, 
-        BackOrder=2,
-        PreOrder=3,
-        SpecialOrder=4,
-        Discontinued=5,
-        CurrentlyUnavailable=6
-    }
+
 
     public enum DeliveryMethod
     {
