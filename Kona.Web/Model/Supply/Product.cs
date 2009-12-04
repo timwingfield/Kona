@@ -17,7 +17,6 @@ namespace Kona.Model {
 
     
     public class Product {
-
         public virtual string SKU { get; set; }
         public virtual string Name { get; set; }
         public virtual decimal Price { get; set; }
@@ -41,8 +40,7 @@ namespace Kona.Model {
 
         public virtual ICollection<Descriptor> Descriptors { get; set; }
         public virtual ICollection<Image> Images { get; set; }
-        public virtual ICollection<Product> Recommended { get; set; }
-        
+       
         public virtual ISet<Category> Categories { get; set; }
         
         #region Object overrides

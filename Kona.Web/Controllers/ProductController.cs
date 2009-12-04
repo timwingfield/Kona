@@ -13,12 +13,17 @@ namespace Kona.Controllers
     public class ProductController : Controller
     {
 
-        StoreService _service;
+        IStoreService _service;
 
-        public ProductController() {
-
+        public ProductController(IStoreService service)
+        {
+            _service = service;
         }
-        
+
+        public ActionResult Search(string query)
+        {
+            return Content("hook me up");
+        }
         //
         // GET: /Product/
 
@@ -41,8 +46,8 @@ namespace Kona.Controllers
         public ActionResult Details(string id)
         {
 
-            //var model = _service.GetDetails(id);
-            return View();
+            var model = _service.GetDetails(id);
+            return View(model);
         }
 
         //

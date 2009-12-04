@@ -11,7 +11,9 @@
     <div id="hdr3">
     <ul class="topNav" id="menulist">
           <%foreach (Category c in Model.ParentCategories) { %>
-            <li class="first"><a href="<%=Url.Action("Index","Product",new {id=c.ID}) %>" title="<%=c.Description %>"><%=c.Name %></a></li>
+            <li class="first"><a href="<%=Url.Action("Index",
+            "Product",new {id=c.ID}) %>" 
+            title="<%=c.Description %>"><%=c.Name %></a></li>
           <%} %>
 
     </ul>
@@ -75,7 +77,7 @@
             <h2 style="margin-top:20px;margin-bottom:20px;">You might also like...</h2>
 
             
-            <%foreach (Product p in Model.SelectedProduct.Related) {
+            <%foreach (Product p in Model.Recommended) {
                   string desc = p.Descriptors.First().Body;
                   %>
             <h4><%=p.Name %></h4>

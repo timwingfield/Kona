@@ -16,7 +16,9 @@ namespace Kona.ViewModels {
         public IEnumerable<Category> Categories { get; set; }
         public IEnumerable<Product> Recent { get; set; }
         public IEnumerable<Product> Favorite { get; set; }
-        public Category HomeCategory {
+        public IEnumerable<Product> Recommended { get; set; }
+        public Category HomeCategory
+        {
             get {
                 return Categories.SingleOrDefault(x => x.IsDefault);
             }

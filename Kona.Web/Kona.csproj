@@ -396,6 +396,8 @@
   <ItemGroup>
     <EmbeddedResource Include="Model\Supply\Descriptor.hbm.xml" />
     <EmbeddedResource Include="Model\Supply\Category.hbm.xml" />
+    <EmbeddedResource Include="Model\Order\OrderItem.hbm.xml" />
+    <EmbeddedResource Include="Model\Order\Order.hbm.xml" />
     <Content Include="nhibernate.config" />
     <EmbeddedResource Include="Model\Supply\Product.hbm.xml" />
     <None Include="nhibernate-configuration.xsd" />

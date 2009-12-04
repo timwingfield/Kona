@@ -22,25 +22,25 @@ namespace Kona.Model
     [Serializable]
     public class Order {
 
-        public Guid ID { get; set; }
-        public string OrderNumber { get; set; }
-        public string UserName { get; set; }
-        public DateTime DateCreated { get; set; }
-        public IList<OrderItem> Items { get; set; }
-        public IList<Transaction> Transactions { get; set; }
-        public string UserLanguageCode { get; set; }
+        public virtual Guid ID { get; set; }
+        public virtual string OrderNumber { get; set; }
+        public virtual string UserName { get; set; }
+        public virtual DateTime DateCreated { get; set; }
+        public virtual IList<OrderItem> Items { get; set; }
+        public virtual IList<Transaction> Transactions { get; set; }
+        public virtual string UserLanguageCode { get; set; }
 
-        public OrderStatus Status { get; set; }
-        public Address ShippingAddress { get; set; }
-        public Address BillingAddress { get; set; }
-        public ShippingMethod ShippingMethod { get; set; }
-        public decimal TaxAmount { get; set; }
-        public PaymentMethod PaymentMethod { get; set; }
+        public virtual OrderStatus Status { get; set; }
+        public virtual Address ShippingAddress { get; set; }
+        public virtual Address BillingAddress { get; set; }
+        public virtual ShippingMethod ShippingMethod { get; set; }
+        public virtual decimal TaxAmount { get; set; }
+        public virtual PaymentMethod PaymentMethod { get; set; }
 
-        public DateTime? DateShipped { get; set; }
-        public DateTime? EstimatedDelivery { get; set; }
-        public string TrackingNumber { get; set; }
-        public TaxRate TaxRate { get; set; }
+        public virtual DateTime? DateShipped { get; set; }
+        public virtual DateTime? EstimatedDelivery { get; set; }
+        public virtual string TrackingNumber { get; set; }
+        public virtual TaxRate TaxRate { get; set; }
         //public LazyList<IIncentive> IncentivesUsed { get; set; }
 
         //public Order():this("","") {
@@ -62,7 +62,8 @@ namespace Kona.Model
         /// <summary>
         /// Adds a product to the cart
         /// </summary>
-        public void AddItem(Product product) {
+        public virtual void AddItem(Product product)
+        {
             AddItem(product, 1);
         }
 
@@ -70,14 +71,16 @@ namespace Kona.Model
         /// <summary>
         /// Removes all items from cart
         /// </summary>
-        public void ClearItems() {
+        public virtual void ClearItems()
+        {
             this.Items.Clear();
         }
 
         /// <summary>
         /// Adds a product to the cart
         /// </summary>
-        public void AddItem(Product product, int quantity) {
+        public virtual void AddItem(Product product, int quantity)
+        {
 
             //see if this item is in the cart already
             OrderItem item = FindItem(product);
@@ -91,7 +94,9 @@ namespace Kona.Model
                         AdjustQuantity(product, item.Quantity + quantity);
                 } else {
                     if (quantity > 0) {
-                        item = new OrderItem(product, quantity);
+                        item = new OrderItem();
+                        item.Product = product;
+                        item.Quantity = quantity;
                         
                         //add to list
                         this.Items.Add(item);
@@ -105,7 +110,8 @@ namespace Kona.Model
         /// <summary>
         /// Adjusts the quantity of an item in the cart
         /// </summary>
-        public void AdjustQuantity(Product product, int newQuantity) {
+        public virtual void AdjustQuantity(Product product, int newQuantity)
+        {
             OrderItem itemToAdjust = FindItem(product);
             if (itemToAdjust != null) {
                 if (newQuantity <= 0) {
@@ -121,14 +127,16 @@ namespace Kona.Model
         /// <summary>
         /// Remmoves a product from the cart
         /// </summary>
-        public void RemoveItem(Product product) {
+        public virtual void RemoveItem(Product product)
+        {
             RemoveItem(product.SKU);
         }
 
         /// <summary>
         /// Remmoves a product from the cart
         /// </summary>
-        public void RemoveItem(string sku) {
+        public virtual void RemoveItem(string sku)
+        {
             var itemToRemove = FindItem(sku);
             if (itemToRemove != null) {
                 this.Items.Remove(itemToRemove);
@@ -141,7 +149,8 @@ namespace Kona.Model
         /// </summary>
         /// <param name="product"></param>
         /// <returns></returns>
-        public OrderItem FindItem(Product product) {
+        public virtual OrderItem FindItem(Product product)
+        {
             OrderItem result = null;
             if (product != null) {
                 //see if this item is in the cart already
@@ -156,7 +165,8 @@ namespace Kona.Model
         /// </summary>
         /// <param name="productID">The product id to find</param>
         /// <returns></returns>
-        public OrderItem FindItem(string sku) {
+        public virtual OrderItem FindItem(string sku)
+        {
 
             this.Items = this.Items ?? new List<OrderItem>();
             //see if this item is in the cart already
@@ -167,7 +177,8 @@ namespace Kona.Model
         }
 
 
-        public void ValidateForCheckout() {
+        public virtual void ValidateForCheckout()
+        {
 
             //Must have 1 or more items
             if (this.Items.Count <= 0)
@@ -202,7 +213,7 @@ namespace Kona.Model
         }
 
 
-        public decimal TaxableGoodsSubtotal
+        public virtual decimal TaxableGoodsSubtotal
         {
             get
             {
@@ -212,7 +223,7 @@ namespace Kona.Model
             }
         }
 
-        public decimal TotalWeightInPounds
+        public virtual decimal TotalWeightInPounds
         {
             get
             {
@@ -220,7 +231,7 @@ namespace Kona.Model
             }
         }
 
-        public bool HasShippableGoods
+        public virtual bool HasShippableGoods
         {
             get
             {
@@ -230,11 +241,11 @@ namespace Kona.Model
         }
 
 
-        public string DiscountReason { get; set; }
-        public decimal DiscountAmount { get; set; }
-              
-        
-        public decimal SubTotal
+        public virtual string DiscountReason { get; set; }
+        public virtual decimal DiscountAmount { get; set; }
+
+
+        public virtual decimal SubTotal
         {
             get
             {
@@ -244,7 +255,7 @@ namespace Kona.Model
             }
         }
 
-        public decimal Total
+        public virtual decimal Total
         {
             get
             {
@@ -256,7 +267,7 @@ namespace Kona.Model
             }
         }
 
-        public decimal TotalPaid
+        public virtual decimal TotalPaid
         {
             get
             {
@@ -271,7 +282,7 @@ namespace Kona.Model
         /// <summary>
         /// Returns the sum of the item quantity in the cart. 
         /// </summary>
-        public int TotalItemQuantity
+        public virtual int TotalItemQuantity
         {
             get
             {
@@ -296,7 +307,7 @@ namespace Kona.Model
         /// Throws an InvalidOperationException if the cart 
         /// has been checked out. 
         /// </exception>
-        public bool RepriceItems()
+        public virtual bool RepriceItems()
         {
             if (this.Status != OrderStatus.NotCheckoutOut)
             {

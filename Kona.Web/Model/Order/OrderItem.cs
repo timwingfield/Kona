@@ -6,26 +6,12 @@ using System.Text;
 namespace Kona.Model {
     public class OrderItem {
 
-        Product _product;
-        public Product Product {
-            get {
-                return _product;
-            }
-        }
-        int _quantity;
-        public int Quantity {
-            get {
-                return _quantity;
-            }
-        }
-        DateTime _dateAdded;
-        public DateTime DateAdded {
-            get {
-                return _dateAdded;
-            }
-        }
+        public virtual Order Order { get; set; }
+        public virtual Product Product {get;set;}
+        public virtual int Quantity { get; set; }
+        public virtual DateTime DateAdded { get; set; }
 
-        public decimal LineTotal
+        public virtual decimal LineTotal
         {
             get
             {
@@ -33,7 +19,7 @@ namespace Kona.Model {
 
             }
         }
-        public decimal ItemsWeight
+        public virtual decimal ItemsWeight
         {
             get
             {
@@ -42,18 +28,10 @@ namespace Kona.Model {
             }
         }
 
-        private OrderItem() { }
-        public OrderItem(Product product):this(product,1){}
-        public OrderItem(Product product, int quantity):this(product,quantity,DateTime.Now){}
-        public OrderItem(Product product, int quantity, DateTime dateAdded)
-        {
-            _product = product;
-            _quantity = quantity;
-            _dateAdded = dateAdded;
-        }
 
-        public void AdjustQuantity(int newQuantity) {
-            _quantity = newQuantity;
+        public virtual void AdjustQuantity(int newQuantity)
+        {
+            this.Quantity = newQuantity;
         }
 
 
@@ -68,7 +46,7 @@ namespace Kona.Model {
         }
 
         public override string ToString() {
-            return this.Product.Name+" ("+_quantity+")";
+            return this.Product.Name+" ("+Quantity+")";
         }
         public override int GetHashCode() {
             return this.Product.SKU.GetHashCode();

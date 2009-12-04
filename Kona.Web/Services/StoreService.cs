@@ -12,6 +12,7 @@ using NHibernate.Transform;
 namespace Kona.App.Services {
     public interface IStoreService{
         ProductListViewModel GetHomeModel();
+        DetailsViewModel GetDetails(string sku);
     }
 
     public class StoreService : IStoreService{
@@ -47,7 +48,6 @@ namespace Kona.App.Services {
         public ProductListViewModel GetHomeModel() {
 
             var result = new ProductListViewModel();
-            //add the featured product
 
             //categories
             result.Categories = _session
@@ -64,29 +64,49 @@ namespace Kona.App.Services {
                 .Future<Product>();
 
             result.FeaturedProduct = featuredProduct.First();
-            result.FeaturedProducts = featuredProduct.Skip(1).Take(3).ToList();
-
-            _session.BeginTransaction();
-            var p1 = result.FeaturedProducts.SingleOrDefault(x => x.SKU == "Boots3");
-            p1.AmountOnHand = 1;
-            p1.Inventory.AddToBasket(p1);
-            _session.Transaction.Commit();
+            result.FeaturedProducts = featuredProduct
+                .Skip(1)
+                .Take(3)
+                .ToList();
+            
             return result;
 
         }
 
-        //        public DetailsViewModel GetDetails(string sku) {
-        //            var result = new DetailsViewModel();
-        //            //categories
-        //            result.Categories = _repo.GetCategories();
+        public DetailsViewModel GetDetails(string sku)
+        {
+            var result = new DetailsViewModel();
+            
+            //categories
+            result.Categories = _session
+                .CreateCriteria<Category>()
+                .Future<Category>();
+            
 
-        //            //organize them
-        //            result.Categories.ToList().ForEach(x => x.SubCategories = result.Categories.Where(y => y.ParentID == x.ID).ToList());
+            //selected product
+            result.SelectedProduct = _session.Get<Product>(sku);
+            
+            var orderIDsContainingCurrentSku=DetachedCriteria.For<OrderItem>()
+                        .Add<OrderItem>(x=>x.Product.SKU==sku)
+                        .SetProjection(Projections.Property("Order.id"));
 
-        //            result.SelectedProduct = _repo.GetProduct(sku);
+            var skusOfProductsAppearingInOrdersContainingCurrentSku = 
+                DetachedCriteria.For<OrderItem>()
+                .SetProjection(Projections.GroupProperty("Product.id"))
+                .AddOrder(NHibernate.Criterion.Order.Desc(Projections.Count("Order.id")))
+                .Add<OrderItem>(x=>x.Product.SKU!=sku)
+                .Add(Subqueries.PropertyIn("Order.id", orderIDsContainingCurrentSku))
+                .SetMaxResults(15);
+                
+            result.Recommended = _session.CreateCriteria<Product>()
+                .SetFetchMode<Product>(x => x.Descriptors, FetchMode.Join)
+                .Add(Subqueries.PropertyIn("id", skusOfProductsAppearingInOrdersContainingCurrentSku))
+                .SetResultTransformer(Transformers.DistinctRootEntity)
+                .List<Product>();
 
-        //            return result;
 
-        //        }
+            return result;
+
+        }
     }
 }
