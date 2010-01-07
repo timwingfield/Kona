@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Kona.Model {
     public class OrderItem {
@@ -15,7 +12,7 @@ namespace Kona.Model {
         {
             get
             {
-                return this.Quantity*(this.Product.DiscountedPrice);
+                return Quantity*(Product.DiscountedPrice);
 
             }
         }
@@ -23,7 +20,7 @@ namespace Kona.Model {
         {
             get
             {
-                return this.Quantity * (this.Product.WeightInPounds);
+                return Quantity * (Product.WeightInPounds);
 
             }
         }
@@ -31,7 +28,7 @@ namespace Kona.Model {
 
         public virtual void AdjustQuantity(int newQuantity)
         {
-            this.Quantity = newQuantity;
+            Quantity = newQuantity;
         }
 
 
@@ -39,17 +36,17 @@ namespace Kona.Model {
         public override bool Equals(object obj) {
             if (obj is OrderItem) {
                 OrderItem compareTo = (OrderItem)obj;
-                return compareTo.Product.SKU == this.Product.SKU;
+                return compareTo.Product.SKU == Product.SKU;
             } else {
                 return base.Equals(obj);
             }
         }
 
         public override string ToString() {
-            return this.Product.Name+" ("+Quantity+")";
+            return Product.Name+" ("+Quantity+")";
         }
         public override int GetHashCode() {
-            return this.Product.SKU.GetHashCode();
+            return Product.SKU.GetHashCode();
         }
         #endregion
     }

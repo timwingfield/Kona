@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace Kona.Model
+﻿namespace Kona.Model
 {
     public class ShippingMethod
     {
@@ -33,24 +28,18 @@ namespace Kona.Model
         public ShippingMethod(string carrier,string serviceName, 
             decimal ratePerPound, string estimatedDelivery, int daysToDeliver)
         {
-            this.ID = 0;
-            this.Carrier = carrier;
-            this.ServiceName = serviceName;
-            this.RatePerPound = ratePerPound;
-            this.EstimatedDelivery = estimatedDelivery;
-            this.Cost = 0;
-            this.DaysToDeliver = daysToDeliver;
+            ID = 0;
+            Carrier = carrier;
+            ServiceName = serviceName;
+            RatePerPound = ratePerPound;
+            EstimatedDelivery = estimatedDelivery;
+            Cost = 0;
+            DaysToDeliver = daysToDeliver;
         }
-
 
         public override string ToString() {
 
             return Display;
         }
-
-
     }
-
-    
-
 }

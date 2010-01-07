@@ -73,7 +73,7 @@ namespace Kona.Model
         /// </summary>
         public virtual void ClearItems()
         {
-            this.Items.Clear();
+            Items.Clear();
         }
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Kona.Model
                         item.Quantity = quantity;
                         
                         //add to list
-                        this.Items.Add(item);
+                        Items.Add(item);
                     }
                 }
 
@@ -115,7 +115,7 @@ namespace Kona.Model
             OrderItem itemToAdjust = FindItem(product);
             if (itemToAdjust != null) {
                 if (newQuantity <= 0) {
-                    this.RemoveItem(product);
+                    RemoveItem(product);
                 } else {
                     itemToAdjust.AdjustQuantity(newQuantity);
                 }
@@ -139,7 +139,7 @@ namespace Kona.Model
         {
             var itemToRemove = FindItem(sku);
             if (itemToRemove != null) {
-                this.Items.Remove(itemToRemove);
+                Items.Remove(itemToRemove);
             }
         }
 
@@ -168,9 +168,9 @@ namespace Kona.Model
         public virtual OrderItem FindItem(string sku)
         {
 
-            this.Items = this.Items ?? new List<OrderItem>();
+            Items = Items ?? new List<OrderItem>();
             //see if this item is in the cart already
-            return (from si in this.Items
+            return (from si in Items
                     where si.Product.SKU == sku
                     select si).SingleOrDefault();
 
@@ -181,21 +181,21 @@ namespace Kona.Model
         {
 
             //Must have 1 or more items
-            if (this.Items.Count <= 0)
+            if (Items.Count <= 0)
                 throw new InvalidOperationException("Order must have one or more items");
 
             //every order must have a shipping address - used for tax calcs
-            if (this.ShippingAddress == null)
+            if (ShippingAddress == null)
                 throw new InvalidOperationException("All orders must have a shipping address specified.");
 
 
             //make sure there's a payment method
-            if (this.PaymentMethod == null)
+            if (PaymentMethod == null)
                 throw new InvalidOperationException("No payment method is set for this order");
 
 
-            if (this.PaymentMethod is CreditCard) {
-                CreditCard cc = this.PaymentMethod as CreditCard;
+            if (PaymentMethod is CreditCard) {
+                CreditCard cc = PaymentMethod as CreditCard;
 
                 if (!cc.IsValid())
                     throw new InvalidOperationException("This credit card is invalid. Please check the expiration and card number.");
@@ -203,10 +203,10 @@ namespace Kona.Model
             }
 
 
-            if (this.HasShippableGoods) {
+            if (HasShippableGoods) {
 
                 //All orders with shippable goods must have shipping method 
-                if (this.ShippingMethod == null)
+                if (ShippingMethod == null)
                     throw new InvalidOperationException("Must have a shipping method selected when ordering shippable goods");
 
             }
@@ -218,7 +218,7 @@ namespace Kona.Model
             get
             {
                 //one of the many reasons to love LINQ :)
-                return this.Items.Where(x => x.Product.IsTaxable)
+                return Items.Where(x => x.Product.IsTaxable)
                     .Sum(x => x.LineTotal);
             }
         }
@@ -227,7 +227,7 @@ namespace Kona.Model
         {
             get
             {
-                return this.Items.Sum(x => x.ItemsWeight);
+                return Items.Sum(x => x.ItemsWeight);
             }
         }
 
@@ -236,7 +236,7 @@ namespace Kona.Model
             get
             {
 
-                return this.Items.Where(x => x.Product.Delivery == DeliveryMethod.Shipped).Count()>0;
+                return Items.Where(x => x.Product.Delivery == DeliveryMethod.Shipped).Count()>0;
             }
         }
 
@@ -250,7 +250,7 @@ namespace Kona.Model
             get
             {
 
-                return this.Items.Sum(x => x.LineTotal)-DiscountAmount;
+                return Items.Sum(x => x.LineTotal)-DiscountAmount;
 
             }
         }
@@ -260,8 +260,8 @@ namespace Kona.Model
             get
             {
                 decimal total= SubTotal + TaxAmount;
-                if(this.ShippingMethod!=null)
-                    total += this.ShippingMethod.Cost;
+                if(ShippingMethod!=null)
+                    total += ShippingMethod.Cost;
 
                 return total;
             }
@@ -272,8 +272,8 @@ namespace Kona.Model
             get
             {
                 decimal paid = 0;
-                if (this.Transactions.Count > 0)
-                    paid = this.Transactions.Sum(x => x.Amount);
+                if (Transactions.Count > 0)
+                    paid = Transactions.Sum(x => x.Amount);
                 return paid;
 
             }
@@ -287,9 +287,9 @@ namespace Kona.Model
             get
             {
                 int numItems = 0;
-                if (this.Items.Count > 0)
+                if (Items.Count > 0)
                 {
-                    numItems = (from i in this.Items
+                    numItems = (from i in Items
                                 select i.Quantity).Sum();
                 }
                 return numItems; 
@@ -309,13 +309,13 @@ namespace Kona.Model
         /// </exception>
         public virtual bool RepriceItems()
         {
-            if (this.Status != OrderStatus.NotCheckoutOut)
+            if (Status != OrderStatus.NotCheckoutOut)
             {
                 throw new InvalidOperationException("Order may not be repriced once checked out."); 
             }
 
-            decimal startingTotal = this.Total; 
-            return startingTotal != this.Total; 
+            decimal startingTotal = Total; 
+            return startingTotal != Total; 
         }
 
 
@@ -323,17 +323,17 @@ namespace Kona.Model
         public override bool Equals(object obj) {
             if (obj is Order) {
                 Order compareTo = (Order)obj;
-                return compareTo.ID == this.ID;
+                return compareTo.ID == ID;
             } else {
                 return base.Equals(obj);
             }
         }
 
         public override string ToString() {
-            return this.UserName + "'s Cart: " + this.Items.Count.ToString() + " items";
+            return UserName + "'s Cart: " + Items.Count.ToString() + " items";
         }
         public override int GetHashCode() {
-            return this.ID.GetHashCode();
+            return ID.GetHashCode();
         }
         #endregion
    }

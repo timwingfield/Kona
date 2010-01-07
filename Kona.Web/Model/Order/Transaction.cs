@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Kona.Model
 {
-
     public enum TransactionProcessor
     {
         FakePaymentProcessor=1,
         PayPal=2
     }
-    
     
     public class Transaction
     {

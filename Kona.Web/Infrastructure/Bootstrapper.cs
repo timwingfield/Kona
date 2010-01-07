@@ -1,8 +1,8 @@
-﻿using StructureMap;
-using StructureMap.Configuration.DSL;
-using NHibernate;
-using Kona;
+﻿using Kona;
 using Kona.App.Services;
+using NHibernate;
+using StructureMap;
+using StructureMap.Configuration.DSL;
 
 namespace Commerce.MVC.Web {
     public static class Bootstrapper {

@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Iesi.Collections.Generic;
 using Kona.Model.Supply.Inventory;
 
@@ -47,17 +45,17 @@ namespace Kona.Model {
         public override bool Equals(object obj) {
             if (obj is Product) {
                 Product compareTo = (Product)obj;
-                return compareTo.SKU == this.SKU;
+                return compareTo.SKU == SKU;
             } else {
                 return base.Equals(obj);
             }
         }
 
         public override string ToString() {
-            return this.Name;
+            return Name;
         }
         public override int GetHashCode() {
-            return this.SKU.GetHashCode();
+            return SKU.GetHashCode();
         }
         #endregion
     }

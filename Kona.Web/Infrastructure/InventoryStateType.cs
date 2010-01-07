@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using NHibernate.UserTypes;
+using System.Data;
 using Kona.Model.Supply.Inventory;
 using NHibernate.SqlTypes;
-using System.Data;
+using NHibernate.UserTypes;
 
 namespace Kona.Infrastructure {
     public enum InventoryStatus {
@@ -38,11 +35,11 @@ namespace Kona.Infrastructure {
             get { return false; }
         }
 
-        public object NullSafeGet(System.Data.IDataReader rs, string[] names, object owner) {
+        public object NullSafeGet(IDataReader rs, string[] names, object owner) {
             return InventoryState.Create((InventoryStatus)rs[names[0]]);
         }
 
-        public void NullSafeSet(System.Data.IDbCommand cmd, object value, int index) {
+        public void NullSafeSet(IDbCommand cmd, object value, int index) {
             ((IDataParameter)cmd.Parameters[index]).Value = ((InventoryState)value).Status;
         }
 
@@ -54,8 +51,8 @@ namespace Kona.Infrastructure {
             get { return typeof(InventoryState); }
         }
 
-        public NHibernate.SqlTypes.SqlType[] SqlTypes {
-            get { return new SqlType[] { new SqlType(DbType.Int32) }; }
+        public SqlType[] SqlTypes {
+            get { return new[] { new SqlType(DbType.Int32) }; }
         }
         public bool Equals(object x, object y) {
             return ((InventoryState)x).Status.Equals(((InventoryState)y).Status);

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace Kona.Model {
 
@@ -28,17 +25,17 @@ namespace Kona.Model {
         public override bool Equals(object obj) {
             if (obj is Category) {
                 Category compareTo = (Category)obj;
-                return compareTo.ID.Equals(this.ID);
+                return compareTo.ID.Equals(ID);
             } else {
                 return base.Equals(obj);
             }
         }
 
         public override string ToString() {
-            return this.Name;
+            return Name;
         }
         public override int GetHashCode() {
-            return this.ID.GetHashCode();
+            return ID.GetHashCode();
         }
         #endregion
 

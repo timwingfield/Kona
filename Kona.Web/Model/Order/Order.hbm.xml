@@ -1,13 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-				   assembly="Kona"
-				   namespace="Kona.Model">
-	<class name="Order"
-		   table="Orders" >
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-        <id name="ID" column="OrderID">
-            <generator class="guid"></generator>
-        </id> 
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Kona" namespace="Kona.Model">
+  <class name="Order" table="Orders">
 
-    </class>
+    <id name="ID" column="OrderID">
+      <generator class="guid"></generator>
+    </id>
+
+  </class>
 </hibernate-mapping>

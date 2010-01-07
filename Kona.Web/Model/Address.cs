@@ -1,7 +1,5 @@
 ﻿using System;
-using System.IO;
 using System.Text;
-using System.Xml;
 
 namespace Kona.Model
 {
@@ -30,19 +28,18 @@ namespace Kona.Model
         
         }
 
-
         public Address(string userName, string first, string last, string email, string street1, string street2, string city, string state, string zip, string country)
         {
-            this.UserName = userName;
-            this.FirstName = first;
-            this.LastName = last;
-            this.Email = email;
-            this.Street1 = street1;
-            this.Street2 = street2;
-            this.City = city;
-            this.StateOrProvince = state;
-            this.Zip = zip;
-            this.Country = country;
+            UserName = userName;
+            FirstName = first;
+            LastName = last;
+            Email = email;
+            Street1 = street1;
+            Street2 = street2;
+            City = city;
+            StateOrProvince = state;
+            Zip = zip;
+            Country = country;
         }
 
         /// <summary>
@@ -52,12 +49,12 @@ namespace Kona.Model
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendFormat("{0} {1}\r\n",this.FirstName, this.LastName);
-            sb.AppendLine(this.Street1);
-            if (!String.IsNullOrEmpty(this.Street2))
-                sb.AppendLine(this.Street2);
+            sb.AppendFormat("{0} {1}\r\n",FirstName, LastName);
+            sb.AppendLine(Street1);
+            if (!String.IsNullOrEmpty(Street2))
+                sb.AppendLine(Street2);
 
-            sb.AppendLine(this.City + ", " + this.StateOrProvince + " " + this.Zip + ", " + this.Country);
+            sb.AppendLine(City + ", " + StateOrProvince + " " + Zip + ", " + Country);
             return sb.ToString();
         }
 
@@ -67,8 +64,8 @@ namespace Kona.Model
             try
             {
                 Address compareTo = (Address)obj;
-                result = this.Street1.Equals(compareTo.Street1, StringComparison.CurrentCultureIgnoreCase) &&
-                    this.City.Equals(compareTo.City, StringComparison.CurrentCultureIgnoreCase);
+                result = Street1.Equals(compareTo.Street1, StringComparison.CurrentCultureIgnoreCase) &&
+                    City.Equals(compareTo.City, StringComparison.CurrentCultureIgnoreCase);
 
 
             }
@@ -81,7 +78,7 @@ namespace Kona.Model
         }
 
         public override int GetHashCode() {
-            return this.Street1.GetHashCode();
+            return Street1.GetHashCode();
         }
 
     }

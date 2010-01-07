@@ -1,32 +1,30 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-				   assembly="Kona"
-				   namespace="Kona.Model">
-	<class name="Product"
-		   table="Products" >
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-		<id name="SKU">
-			<generator class="assigned"/>
-		</id>
-		<property name="Name" column="ProductName" not-null="true"/>
-		<property name="Price" column="BasePrice" not-null="true" />
-        <property name="WeightInPounds" column="WeightInPounds" not-null="true" />
-        <property name="DateAvailable" column="DateAvailable" not-null="true" />
-        <property name="EstimatedDelivery" column="EstimatedDelivery" not-null="true" />
-        <property name="AllowBackOrder" column="AllowBackOrder" not-null="true" />
-        <property name="IsTaxable" column="IsTaxable" not-null="true" />
-        <property name="DefaultImage" column="DefaultImageFile" />
-        <property name="AmountOnHand" column="AmountOnHand" not-null="true" />
-        <property name="AllowPreOrder" column="AllowPreOrder" not-null="true" />
-        <property name="Delivery" column="DeliveryMethodID" not-null="true" />
-        <property name="Inventory" type="Kona.Infrastructure.InventoryStateType, Kona" column="InventoryStatusID"></property>
-        <bag name="Descriptors" >
-            <key column="SKU"></key>
-            <one-to-many class="Descriptor"/>
-        </bag>
-        <set name="Categories" table="Categories_Products" >
-            <key column="SKU"></key>
-            <many-to-many class="Category" column="CategoryID"></many-to-many>
-        </set>
-    </class>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Kona" namespace="Kona.Model">
+  <class name="Product" table="Products">
+
+    <id name="SKU">
+      <generator class="assigned" />
+    </id>
+    <property name="Name" column="ProductName" not-null="true" />
+    <property name="Price" column="BasePrice" not-null="true" />
+    <property name="WeightInPounds" column="WeightInPounds" not-null="true" />
+    <property name="DateAvailable" column="DateAvailable" not-null="true" />
+    <property name="EstimatedDelivery" column="EstimatedDelivery" not-null="true" />
+    <property name="AllowBackOrder" column="AllowBackOrder" not-null="true" />
+    <property name="IsTaxable" column="IsTaxable" not-null="true" />
+    <property name="DefaultImage" column="DefaultImageFile" />
+    <property name="AmountOnHand" column="AmountOnHand" not-null="true" />
+    <property name="AllowPreOrder" column="AllowPreOrder" not-null="true" />
+    <property name="Delivery" column="DeliveryMethodID" not-null="true" />
+    <property name="Inventory" type="Kona.Infrastructure.InventoryStateType, Kona" column="InventoryStatusID"></property>
+    <bag name="Descriptors">
+      <key column="SKU"></key>
+      <one-to-many class="Descriptor" />
+    </bag>
+    <set name="Categories" table="Categories_Products">
+      <key column="SKU"></key>
+      <many-to-many class="Category" column="CategoryID"></many-to-many>
+    </set>
+  </class>
 </hibernate-mapping>

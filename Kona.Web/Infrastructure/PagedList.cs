@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 
 namespace System.Collections.Generic
 {
@@ -40,18 +37,18 @@ namespace System.Collections.Generic
     {
         public PagedList(IQueryable<T> source, int index, int pageSize)
         {
-            this.TotalCount = source.Count();
-            this.PageSize = pageSize;
-            this.PageIndex = index;
-            this.AddRange(source.Skip(index * pageSize).Take(pageSize).ToList());
+            TotalCount = source.Count();
+            PageSize = pageSize;
+            PageIndex = index;
+            AddRange(source.Skip(index * pageSize).Take(pageSize).ToList());
         }
 
         public PagedList(List<T> source, int index, int pageSize)
         {
-            this.TotalCount = source.Count();
-            this.PageSize = pageSize;
-            this.PageIndex = index;
-            this.AddRange(source.Skip(index * pageSize).Take(pageSize).ToList());
+            TotalCount = source.Count();
+            PageSize = pageSize;
+            PageIndex = index;
+            AddRange(source.Skip(index * pageSize).Take(pageSize).ToList());
         }
 
         public int TotalCount

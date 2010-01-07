@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Kona.Model
 {
-
-
-    
     public class CreditCard:PaymentMethod
     {
 
@@ -35,12 +29,12 @@ namespace Kona.Model
         public CreditCard(string cardType, string nameOnCard, string accountNumber, int expMonth, int expYear, string verificationCode)
         {
 
-            this.Name = nameOnCard;
-            this.CardType = cardType;
-            this.AccountNumber = accountNumber;
-            this.VerificationCode = verificationCode;
-            this.ExpirationMonth = expMonth;
-            this.ExpirationYear = expYear;
+            Name = nameOnCard;
+            CardType = cardType;
+            AccountNumber = accountNumber;
+            VerificationCode = verificationCode;
+            ExpirationMonth = expMonth;
+            ExpirationYear = expYear;
         }
 
 

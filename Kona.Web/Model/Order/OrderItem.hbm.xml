@@ -1,16 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
-				   assembly="Kona"
-				   namespace="Kona.Model">
-	<class name="OrderItem"
-		   table="OrderItems" >
+﻿<?xml version="1.0" encoding="utf-8"?>
 
-        <composite-id>
-            <key-many-to-one name="Product" column="SKU">
-            </key-many-to-one>
-            <key-many-to-one name="Order" column="OrderID">
-            </key-many-to-one>
-        </composite-id>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Kona" namespace="Kona.Model">
+  <class name="OrderItem" table="OrderItems">
 
-    </class>
+    <composite-id>
+      <key-many-to-one name="Product" column="SKU"></key-many-to-one>
+      <key-many-to-one name="Order" column="OrderID"></key-many-to-one>
+    </composite-id>
+
+  </class>
 </hibernate-mapping>
