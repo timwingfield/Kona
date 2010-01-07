@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
 using System.Web.Routing;
-using HibernatingRhinos.Profiler.Appender.NHibernate;
 using Kona.App.Infrastructure;
 using Commerce.MVC.Web;
 using NHibernate;
@@ -48,7 +47,6 @@ namespace Kona
         private static ISessionFactory CreateSessionFactory() {
             var cfg = new Configuration().Configure(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "nhibernate.config"));
             cfg.SetProperty(NHibernate.Cfg.Environment.ConnectionStringName, System.Environment.MachineName);
-            NHibernateProfiler.Initialize();
             return cfg.BuildSessionFactory();
         }
 
