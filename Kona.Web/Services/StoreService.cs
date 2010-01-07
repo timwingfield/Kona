@@ -9,7 +9,7 @@ using NHibernate.Transform;
 
 namespace Kona.App.Services {
     public interface IStoreService{
-        ProductListViewModel GetHomeModel();
+        ProductListViewModel GetHomeModel(int categoryId);
         DetailsViewModel GetDetails(string sku);
     }
 
@@ -20,14 +20,16 @@ namespace Kona.App.Services {
             _session = session;
         }
 
-        public ProductListViewModel GetHomeModel() {
+        public ProductListViewModel GetHomeModel(int categoryId) {
 
             var result = new ProductListViewModel();
 
-            //categories
-            result.Categories = _session
+            var categories = _session
                 .CreateCriteria<Category>()
                 .Future<Category>();
+
+            result.Categories = categories;
+            result.SelectedCategory = categories.SingleOrDefault(x => x.ID == categoryId);
 
             
             var featuredProduct = _session

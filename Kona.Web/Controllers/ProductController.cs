@@ -1,11 +1,11 @@
 using System.Web.Mvc;
 using Kona.App.Services;
+using Kona.ViewModels;
 
 namespace Kona.Controllers
 {
     public class ProductController : Controller
     {
-
         IStoreService _service;
 
         public ProductController(IStoreService service)
@@ -17,24 +17,18 @@ namespace Kona.Controllers
         {
             return Content("hook me up");
         }
-        //
-        // GET: /Product/
 
         public ActionResult Index(int? id)
         {
-            //ProductListViewModel model=null;
-            ////if an ID is sent in it's a category
-            //if (id.HasValue) {
-            //    model = _service.GetCategoryModel((int)id);
-            //} else {
-            //    RedirectToAction("Index", "Home");
-            //}
-            //return View(model);
-            return Content("Success");
-        }
+            ProductListViewModel model = null;
+            if (id.HasValue)
+                model = _service.GetHomeModel(id.Value);
+            else
+                RedirectToAction("Index", "Home");
 
-        //
-        // GET: /Product/Details/5
+
+            return View(model);
+        }
 
         public ActionResult Details(string id)
         {
@@ -43,16 +37,10 @@ namespace Kona.Controllers
             return View(model);
         }
 
-        //
-        // GET: /Product/Create
-
         public ActionResult Create()
         {
             return View();
         } 
-
-        //
-        // POST: /Product/Create
 
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Create(FormCollection collection)
@@ -69,16 +57,10 @@ namespace Kona.Controllers
             }
         }
 
-        //
-        // GET: /Product/Edit/5
- 
         public ActionResult Edit(int id)
         {
             return View();
         }
-
-        //
-        // POST: /Product/Edit/5
 
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Edit(int id, FormCollection collection)
