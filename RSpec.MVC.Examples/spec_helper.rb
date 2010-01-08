@@ -9,6 +9,8 @@ require '../Kona.Web/bin/Kona.dll'
 include Kona
 include Kona::Controllers
 
+require 'mocks.rb'
+
 def jruby?
   ::RUBY_PLATFORM == 'java'
 end
