@@ -8,16 +8,14 @@ require 'spec'
 require '../Kona.Web/bin/Kona.dll'
 include Kona
 include Kona::Controllers
+include Kona::App
 
 require 'mocks.rb'
 require 'mvc_extensions'
 
-
 def jruby?
   ::RUBY_PLATFORM == 'java'
 end
-
-
 
 module Spec::Example  
   

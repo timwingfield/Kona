@@ -1,9 +1,9 @@
 class StoreServiceMock 
-  include Kona::App::Services::IStoreService
+  include Services::IStoreService
 
   def GetHomeModel(categoryId)
-     model = Kona::ViewModels::ProductListViewModel.new
-     model.SelectedCategory = Kona::Model::Category.new 'Test Category'
+     model = ViewModels::ProductListViewModel.new
+     model.SelectedCategory = Model::Category.new 'Test Category'
      model
   end
 end
