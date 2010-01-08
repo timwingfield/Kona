@@ -20,6 +20,6 @@ describe "Creating MVC controllers" do
   it "can access Name of category on Model" do 
      p = ProductController.new StoreServiceMock.new
      result = p.Index 0
-     result.view_data.model.selected_category.name.should == 'Test Category'
+     result.view_model.selected_category.name.should == 'Test Category'
   end
 end
