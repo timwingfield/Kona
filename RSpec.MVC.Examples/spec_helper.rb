@@ -5,7 +5,9 @@ $_spec_spec = true # Prevents Kernel.exit in various places
  
 require 'spec'
 
-require '../Kona.Web/bin/Kona.dll'
+$: << '../Lib'
+$: << '../Kona.Web/bin/'
+require 'Kona.dll'
 include Kona
 include Kona::Controllers
 include Kona::App

@@ -5,4 +5,7 @@ describe "Testing it works" do
     puts "Working..."
     1.should == 1
   end
+  it "should " do
+    puts 'Hello'
+  end
 end 
