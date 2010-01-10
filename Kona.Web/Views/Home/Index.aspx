@@ -47,7 +47,7 @@
         </div>
         
         <!--Product widget with 1 product-->
-        <div class="prodWidget">
+        <div id="featured" class="prodWidget">
         <%var featured = Model.FeaturedProduct; %>
             <h4>
                 Featured</h4>
@@ -77,7 +77,7 @@
         
         
         <!--Product widget with three products-->
-        <div class="prodWidget">
+        <div id="blowout_specials" class="prodWidget">
             <h4>Blowout Specials</h4>
             <hr />
             <%foreach (var p in Model.FeaturedProducts) { %>
