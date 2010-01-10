@@ -18,9 +18,10 @@ namespace Kona.App.Services {
         ISession _session;
         public StoreService(ISession session) {
             _session = session;
+            
         }
 
-        public ProductListViewModel GetHomeModel(int categoryId) {
+        public ProductListViewModel GetHomeModel(int categoryId){
 
             var result = new ProductListViewModel();
 
@@ -30,24 +31,35 @@ namespace Kona.App.Services {
 
             result.Categories = categories;
             result.SelectedCategory = categories.SingleOrDefault(x => x.ID == categoryId);
+            IEnumerable<Product> selectProducts = SelectProducts(categoryId);
 
-            
-            var featuredProduct = _session
+            if (selectProducts.Count() > 0)
+            {
+                result.FeaturedProduct = selectProducts.First();
+                result.FeaturedProducts = selectProducts
+                    .Skip(1)
+                    .Take(3)
+                    .ToList();
+            }
+            else
+            {
+                result.FeaturedProduct = new Product();
+                result.FeaturedProducts = new List<Product>();
+            }
+
+            return result;
+
+        }
+
+        private IEnumerable<Product> SelectProducts(int categoryId)
+        {
+            return _session
                 .CreateCriteria<Product>()
                 .SetFetchMode<Product>(x=>x.Descriptors,FetchMode.Join)
                 .CreateCriteria<Product>(x=>x.Categories)
-                .Add<Category>(x=>x.ID==33) 
+                .Add(Expression.Or(Expression.Eq("ID", categoryId), Expression.Eq("Parent.ID", categoryId)))
                 .SetResultTransformer(Transformers.DistinctRootEntity)
                 .Future<Product>();
-
-            result.FeaturedProduct = featuredProduct.First();
-            result.FeaturedProducts = featuredProduct
-                .Skip(1)
-                .Take(3)
-                .ToList();
-            
-            return result;
-
         }
 
         public DetailsViewModel GetDetails(string sku)
