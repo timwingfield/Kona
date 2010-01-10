@@ -47,7 +47,7 @@
 
     <div class="colmiddle fltleft">
     <!--Product widget with 1 product-->
-    <div class="prodWidget">
+    <div class=""prodWidget">
         <h4>
             <%=Model.SelectedProduct.Name %></h4>
         <hr />
@@ -73,7 +73,7 @@
             <p><%=d.Body%></p>
             
             <%} %>
-            <div class="prodWidget">
+            <div id="recommendations" class="prodWidget">
             <h2 style="margin-top:20px;margin-bottom:20px;">You might also like...</h2>
 
             

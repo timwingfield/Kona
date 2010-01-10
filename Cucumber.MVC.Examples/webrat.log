@@ -112,3 +112,111 @@ D, [2010-01-10T11:57:43.009000 #3308] DEBUG -- : REQUESTING PAGE: GET http://loc
 D, [2010-01-10T11:57:43.087000 #3308] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
 D, [2010-01-10T11:57:43.201000 #3308] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
 D, [2010-01-10T11:57:43.353000 #3308] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T13:48:33.224000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:33.489000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:33.624000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:33.719000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:33.821000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:33.983000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:34.099000 #8108] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T13:48:34.199000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:34.394000 #8108] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T13:48:34.473000 #8108] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T13:48:34.571000 #8108] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:01:49.060000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:49.315000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:49.453000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:49.549000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:49.645000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:49.770000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:49.851000 #7056] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:01:49.960000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:50.119000 #7056] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:01:50.287000 #7056] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:01:50.368000 #7056] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:23:20.464000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:20.917000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:21.132000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:21.260000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:21.491000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:21.709000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:21.982000 #1384] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:23:22.140000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:22.465000 #1384] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:23:22.595000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:23:22.739000 #1384] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:23:22.881000 #1384] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/Product/Details/Boots2 with {} and HTTP headers {}
+D, [2010-01-10T14:24:04.963000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:05.344000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:05.595000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:05.909000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:06.091000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:06.346000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:06.514000 #1900] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:24:06.625000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:06.897000 #1900] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:24:07.040000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:24:07.168000 #1900] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:24:07.274000 #1900] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/Product/Details/Boots2 with {} and HTTP headers {}
+D, [2010-01-10T14:25:30.982000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:31.224000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:31.383000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:31.490000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:31.598000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:31.756000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:31.877000 #3820] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:25:34.643000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:34.827000 #3820] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:25:34.946000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:25:35.078000 #3820] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:25:35.207000 #3820] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/Product/Details/Boots2 with {} and HTTP headers {}
+D, [2010-01-10T14:33:56.278000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:56.497000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:56.665000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:56.801000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:57.062000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:57.254000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:57.486000 #7416] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:33:57.836000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:58.128000 #7416] DEBUG -- : REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:33:58.285000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+D, [2010-01-10T14:33:58.561000 #7416] DEBUG -- : REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+D, [2010-01-10T14:33:58.942000 #7416] DEBUG -- : REQUESTING PAGE: GET http://localhost:5764/Product/Details/Rainier Leather Hiking Boots with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/19 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/ with {} and HTTP headers {}
+REQUESTING PAGE: GET /Product/Index/29 with {} and HTTP headers {"HTTP_REFERER"=>"http://localhost:5764/"}
+REQUESTING PAGE: GET http://localhost:5764/Product/Details/Rainier Leather Hiking Boots with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/Product/Details/#<Product:0x533fa2c> with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/Product/Details/#<Product:0x5342de4> with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/Product/Details/Boots2 with {} and HTTP headers {}
+REQUESTING PAGE: GET http://localhost:5764/Product/Details/Boots2 with {} and HTTP headers {}
