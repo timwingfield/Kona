@@ -51,17 +51,6 @@ namespace Kona.App.Services {
 
         }
 
-        private IEnumerable<Product> SelectProducts(int categoryId)
-        {
-            return _session
-                .CreateCriteria<Product>()
-                .SetFetchMode<Product>(x=>x.Descriptors,FetchMode.Join)
-                .CreateCriteria<Product>(x=>x.Categories)
-                .Add(Expression.Or(Expression.Eq("ID", categoryId), Expression.Eq("Parent.ID", categoryId)))
-                .SetResultTransformer(Transformers.DistinctRootEntity)
-                .Future<Product>();
-        }
-
         public DetailsViewModel GetDetails(string sku)
         {
             var result = new DetailsViewModel();
@@ -73,6 +62,17 @@ namespace Kona.App.Services {
             result.Recommended = GetRecommendedProducts(sku);
 
             return result;
+        }
+
+        private IEnumerable<Product> SelectProducts(int categoryId)
+        {
+            return _session
+                .CreateCriteria<Product>()
+                .SetFetchMode<Product>(x=>x.Descriptors,FetchMode.Join)
+                .CreateCriteria<Product>(x=>x.Categories)
+                .Add(Expression.Or(Expression.Eq("ID", categoryId), Expression.Eq("Parent.ID", categoryId)))
+                .SetResultTransformer(Transformers.DistinctRootEntity)
+                .Future<Product>();
         }
 
         private IList<Product> GetRecommendedProducts(string sku)
