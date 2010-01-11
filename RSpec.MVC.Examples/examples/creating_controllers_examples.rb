@@ -5,21 +5,25 @@ describe "Creating MVC controllers" do
      p = ProductController.new nil
      p.should_not be_nil
   end
+end
 
-  it "can mock the IStoreSerivce" do 
-     p = ProductController.new StoreServiceMock.new
+describe "Mocking IStoreService" do
+  let(:p) {ProductController.new Stubber.GetIStoreService}
+  let(:category_id) {0}
+
+  it "can mock the IStoreSerivce" do
      p.should_not be_nil
   end
 
-  it "should return ViewModel from GetHomeModel" do 
-     p = ProductController.new StoreServiceMock.new
-     result = p.Index 0
-     result.ViewData.should_not be_nil
+  it "should return ViewData from GetHomeModel" do
+     p.Index(category_id).ViewData.should_not be_nil
   end
 
-  it "can access Name of category on Model" do 
-     p = ProductController.new StoreServiceMock.new
-     result = p.Index 0
-     result.view_model.selected_category.name.should == 'Test Category'
+  it "should return ViewModel from GetHomeModel" do
+     p.Index(category_id).ViewData.Model.should_not be_nil
+  end
+
+  it "can access Name of category on Model via view_model" do
+     p.Index(category_id).view_model.SelectedCategory.name.should == 'Test Category'
   end
 end

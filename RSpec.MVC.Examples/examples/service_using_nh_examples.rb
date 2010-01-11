@@ -13,7 +13,7 @@ describe Services::StoreService do
   it "should return all the categories in the database" do
     NHibernate::insert_category session
     model = service.get_home_model 0
-    puts model.Categories.methods
+    puts model.Categories.class
     model.Categories.to_a.Count.should == 1
   end
 end
