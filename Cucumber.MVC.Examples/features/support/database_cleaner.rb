@@ -1,5 +1,7 @@
 def empty_database
-  #puts "We could do whatever... ;)"
+  date_of_last_restore = '01/01/2010'
+  OrderItem.delete_all ["DateAdded > ?", date_of_last_restore]
+  Order.delete_all ["CreatedOn > ?", date_of_last_restore]
 end
 
 Before do
