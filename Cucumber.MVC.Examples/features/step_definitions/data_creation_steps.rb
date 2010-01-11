@@ -1,5 +1,3 @@
-
-
 Given /^customer order for "([^\"]*)" and "([^\"]*)"$/ do |product1, product2|
   order = Order.find_or_create
 
