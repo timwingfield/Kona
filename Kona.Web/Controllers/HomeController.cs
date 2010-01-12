@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Web;
+using System.Web.Mvc;
 using Kona.App.Services;
 
 namespace Kona.Controllers
@@ -23,5 +24,10 @@ namespace Kona.Controllers
         {
             return View();
         }
+
+       public string LocateApplicationPath(HttpRequestBase httpRequestBase)
+       {
+          return string.Empty;//httpRequestBase.ApplicationPath;
+       }
     }
 }

@@ -10,3 +10,15 @@ Given /^customer order for "([^\"]*)"$/ do |product|
 
   OrderItem.create_item(order, product)
 end
+
+Given /^the featured product "([^\"]*)"$/ do |product|
+end
+
+Given /^the following "([^\"]*)":$/ do |category, products|
+  products.hashes.map do |p|
+    p[:name]
+  end
+end
+
+Given /^"([^\"]*)" in "([^\"]*)"/ do |product, category|
+end

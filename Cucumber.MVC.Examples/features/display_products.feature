@@ -20,7 +20,7 @@ Scenario: Blowout Specials
     And I should see "Climbing Rope with Single Caribiner" listed under "Blowout Specials"
 
 Scenario Outline: Blowout Specials
-    Given <product> "Blowout Specials" product
+    Given <product> in "Blowout Specials"
     When I visit the homepage
     Then I should see <product> listed under "Blowout Specials"
 
@@ -31,8 +31,8 @@ Scenario Outline: Blowout Specials
       |  "Climbing Rope with Single Caribiner"      |  
 
 Scenario Outline: Categories work as expected
-    Given <product> <category> product
-    When I visit the <category>
+    Given <product> in <category>
+    When I visit <category>
     Then I should see <product> listed
 
     Examples:

@@ -2,7 +2,7 @@ When /^I visit the homepage$/ do
   visit url + '/'
 end
 
-When /^I visit the "([^\"]*)"$/ do |category|
+When /^I visit "([^\"]*)"$/ do |category|
   When "I visit the homepage"
   click_link category
 end
