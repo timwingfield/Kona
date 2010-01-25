@@ -25,7 +25,7 @@ namespace Kona.Controllers
             return View();
         }
 
-        public string GetRequestInformation(HttpRequestBase requestBase)
+        public string LocateApplicationPath(HttpRequestBase requestBase)
         {
             return requestBase.ApplicationPath;
         }

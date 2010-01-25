@@ -1,15 +1,3 @@
-Given /^the featured product "([^\"]*)"$/ do |product|
-end
-
-Given /^the following "([^\"]*)":$/ do |category, products|
-  products.hashes.map do |p|
-    p[:name]
-  end
-end
-
-Given /^"([^\"]*)" "([^\"]*)" product$/ do |product, category|
-end
-
 Then /^I should see "([^\"]*)" listed under "([^\"]*)"$/ do |product, area|
   within get_div_id(area) do |products|
     products.should contain(product)

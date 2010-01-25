@@ -45,7 +45,6 @@ module Webrat
 
   class SeleniumResponse
     def is_text_present(text_finder)
-      puts text_finder
       body.include? text_finder
     end
   end
