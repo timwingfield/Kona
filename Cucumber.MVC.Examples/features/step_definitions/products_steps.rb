@@ -6,7 +6,7 @@ end
 
 Then /^I should not see "([^\"]*)" listed under "([^\"]*)"$/ do |product, area|
   within get_div_id(area) do |products|
-    products.should_not contain(product)
+    products.should_not contain(product) #This does not work with Selenium
   end
 end
 
