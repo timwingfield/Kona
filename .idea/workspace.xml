@@ -42,10 +42,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mocks.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="mocks.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/mocks.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="0.2407767">
+            <state line="31" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cucumber.yml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="68" selection-start="208" selection-end="208" vertical-scroll-proportion="0.064150944">
               <folding />
             </state>
           </provider>
@@ -72,11 +81,11 @@
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/display_products.feature" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/data_creation_steps.rb" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/products_steps.rb" />
-        <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/mvc_extensions.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/examples/stubbing_http_base_examples.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/examples/creating_controllers_examples.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/mocks.rb" />
+        <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml" />
       </list>
     </option>
   </component>
@@ -501,13 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="84" selection-start="224" selection-end="224" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/products_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="74" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
@@ -573,7 +575,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/mocks.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="0.2407767">
+        <state line="31" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="68" selection-start="208" selection-end="208" vertical-scroll-proportion="0.064150944">
           <folding />
         </state>
       </provider>
