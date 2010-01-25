@@ -27,19 +27,19 @@ end
 end
 
 describe "Mocking Service using framework" do
-  it "can mock the IStoreSerivce" do
-     p = ProductController.new Stubber.store_service
+  it "supports mocking IStoreService" do
+     p = ProductController.new Stubber.get_store_service
      p.should_not be_nil
   end
 
   it "should return ViewModel from GetHomeModel" do
-     p = ProductController.new Stubber.store_service
+     p = ProductController.new Stubber.get_store_service
      result = p.Index 0
      result.ViewData.should_not be_nil
   end
 
   it "can access Name of category on Model" do
-     p = ProductController.new Stubber.store_service
+     p = ProductController.new Stubber.get_store_service
      result = p.Index 0
      result.view_model.selected_category.name.should == 'Test Category'
   end
