@@ -16,7 +16,6 @@ namespace Kona.Controllers
         public ActionResult Index()
         {
             var model = _service.GetHomeModel(33);
-            //return Content("Success");
             return View(model);
         }
 

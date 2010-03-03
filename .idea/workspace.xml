@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager" verified="true">
     <list default="true" readonly="true" id="c004f622-3d2d-40dc-83a0-53208213003e" name="Default" comment="" />
-    <ignored path=".idea/workspace.xml" />
     <ignored path="Kona.iws" />
+    <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,37 +24,10 @@
   <component name="FileColors" enabled="true" enabledForTabs="true" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="creating_controllers_examples.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/examples/creating_controllers_examples.rb">
+      <file leaf-file-name="creating_controllers_examples.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/specs/Kona/creating_controllers_examples.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="56" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stubbing_http_base_examples.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/examples/stubbing_http_base_examples.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="41" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mocks.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/mocks.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cucumber.yml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="68" selection-start="208" selection-end="208" vertical-scroll-proportion="0.064150944">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.05627198">
               <folding />
             </state>
           </provider>
@@ -70,7 +43,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/model/Categories_Product.rb" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/database_cleaner.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/examples/nhibernate_examples.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/spec_helper.rb" />
@@ -78,7 +50,6 @@
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/examples/service_using_nh_examples.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/examples/prove_env_working.rb" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/navigation_steps.rb" />
-        <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/display_products.feature" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/data_creation_steps.rb" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/products_steps.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/mvc_extensions.rb" />
@@ -86,6 +57,8 @@
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/examples/creating_controllers_examples.rb" />
         <option value="$PROJECT_DIR$/RSpec.MVC.Examples/mocks.rb" />
         <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml" />
+        <option value="$PROJECT_DIR$/Cucumber.MVC.Examples/features/display_products.feature" />
+        <option value="$PROJECT_DIR$/features/display_products.feature" />
       </list>
     </option>
   </component>
@@ -144,7 +117,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RSpec.MVC.Examples" />
+              <option name="myItemId" value="specs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -158,11 +131,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="RSpec.MVC.Examples" />
+              <option name="myItemId" value="specs" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="examples" />
+              <option name="myItemId" value="Kona" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -173,72 +146,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cucumber.MVC.Examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cucumber.MVC.Examples" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cucumber.MVC.Examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="support" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Kona" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cucumber.MVC.Examples" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="features" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="step_definitions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -402,11 +313,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Cucumber.Webrat" />
-      <item index="1" class="java.lang.String" itemvalue="Cucumber.Selenium" />
-      <item index="2" class="java.lang.String" itemvalue="Cucumber.Recommendations should not include itself" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.Run Rspec.Examples" />
-      <item index="4" class="java.lang.String" itemvalue="Test::Unit/Shoulda.All in: RSpec.MVC.Examples" />
+      <item index="0" class="java.lang.String" itemvalue="Cucumber.Recommendations should not include itself" />
+      <item index="1" class="java.lang.String" itemvalue="Test::Unit/Shoulda.All in: RSpec.MVC.Examples" />
+      <item index="2" class="java.lang.String" itemvalue="Cucumber.Selenium" />
+      <item index="3" class="java.lang.String" itemvalue="Cucumber.Webrat" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.Run Rspec.Examples" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -434,9 +345,9 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3290938" sideWeight="0.63253695" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3298887" sideWeight="0.0" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35949942" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35949942" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -483,106 +394,98 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/nhibernate_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="4" selection-start="443" selection-end="443" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/examples/nhibernate_examples.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="467" selection-end="467" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/examples/service_using_nh_examples.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="488" selection-end="488" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/spec_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="0" selection-start="321" selection-end="345" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/mvc_extensions.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="35" selection-start="148" selection-end="148" vertical-scroll-proportion="0.099415205">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/products_steps.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="74" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/display_products.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="12" selection-start="550" selection-end="550" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/selenium_env.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="347" selection-end="347" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/webrat_env.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="61" selection-start="311" selection-end="311" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/webrat_selenium_hack.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/product_recommendations.feature">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="21" selection-start="1805" selection-end="1805" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/env.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/examples/stubbing_http_base_examples.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="41" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="41" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/examples/creating_controllers_examples.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="56" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0">
+        <state line="41" column="56" selection-start="1222" selection-end="1222" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/search.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/display_products.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="13" selection-start="1368" selection-end="1368" vertical-scroll-proportion="0.75239235">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/RSpec.MVC.Examples/mocks.rb">
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/navigation_steps.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="28" selection-start="752" selection-end="752" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/products_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/step_definitions/data_creation_steps.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="20" selection-start="99" selection-end="99" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/model/Customer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/support/model/Product.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="11" selection-start="120" selection-end="120" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/features/product_recommendations.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="45" selection-start="714" selection-end="714" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cucumber.MVC.Examples/cucumber.yml">
+    <entry file="file://$PROJECT_DIR$/features/cucumber.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="68" selection-start="208" selection-end="208" vertical-scroll-proportion="0.064150944">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/add_to_basket.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/search.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="85" selection-start="318" selection-end="318" vertical-scroll-proportion="0.1992966">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/display_products.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1284" selection-end="1284" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/features/product_recommendations.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/specs/Kona/creating_controllers_examples.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.05627198">
           <folding />
         </state>
       </provider>

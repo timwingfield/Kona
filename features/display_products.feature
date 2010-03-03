@@ -30,13 +30,13 @@ Scenario Outline: Blowout Specials
       |  "Trailhead Locking Carabiner"              |
       |  "Climbing Rope with Single Caribiner"      |  
 
-Scenario Outline: Products filtered by category
+Scenario Outline: Categories work as expected
     Given <product> in <category>
     When I visit <category>
     Then I should see <product> listed
 
-    Scenarios:
+    Examples:
       | product                                     |  category       |
       |  "Adventure Works 20x30 Binoculars"         |  "Camping Gear" |
       |  "Sierra Leather Hiking Boots"              |  "Camping Gear" |
-      |  "Sprint 500 Bike"                          |  "Biking Gear"  |  
+      |  "Sprint 500 Bike"                          |  "Biking Gear"  |
