@@ -1,4 +1,5 @@
 $: << '../Lib'
+$: << 'support'
 $: << '../Kona.Web/bin/'
 
 require 'rubygems'
