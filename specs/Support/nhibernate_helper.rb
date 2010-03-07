@@ -9,10 +9,10 @@ module NHibernate
 
   def create_config
     config = Configuration.new
-    config.configure(File.join(Dir.pwd, "nhibernate.config"))
+    config.configure(File.join(Dir.pwd, "Support/nhibernate.config"))
   end
 
-  def create_session()
+  def self.create_session()
     cfg = create_config
     session_factory = cfg.BuildSessionFactory()
     session = session_factory.open_session

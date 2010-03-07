@@ -20,7 +20,7 @@ module NHibernate
     return session
   end
 
-  def insert_category(session)
+  def insert_single_category(session)
     category = Model::Category.new
     category.Name = 'Test'
     category.Description = 'Test Category'

@@ -1,6 +1,7 @@
 $: << '../Lib'
-$: << 'support'
+$: << 'specs/Support'
 $: << '../Kona.Web/bin/'
+$: << 'C:/Program Files/Reference Assemblies/Microsoft/Framework/v3.5/'
 
 require 'rubygems'
 require 'stringio'
@@ -8,6 +9,7 @@ require 'stringio'
 $_spec_spec = true # Prevents Kernel.exit in various places
 require 'spec'
 
+require 'System.Web.Abstractions.dll'
 require 'Kona.dll'
 include Kona
 include Kona::Controllers
@@ -17,8 +19,10 @@ require 'NHibernate.dll'
 include NHibernate
 include NHibernate::Cfg
 
-require 'mocks.rb'
 require 'mvc_extensions'
+
+require 'caricature'
+include Caricature
 
 def jruby?
   ::RUBY_PLATFORM == 'java'

@@ -24,7 +24,7 @@ namespace Kona.Controllers
             if (id.HasValue)
                 model = _service.GetHomeModel(id.Value);
             else
-                RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");
 
 
             return View(model);
@@ -32,7 +32,6 @@ namespace Kona.Controllers
 
         public ActionResult Details(string id)
         {
-
             var model = _service.GetDetails(id);
             return View(model);
         }
