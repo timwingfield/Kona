@@ -1,6 +1,6 @@
 Feature: Recommending products
   In order to increase conversions
-  The a customer
+  The customer
   Needs to be recommended to other products
 
 Scenario: Recommendations should include other similar purchased products

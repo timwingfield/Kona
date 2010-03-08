@@ -1,7 +1,7 @@
 Feature: Display Products
-In order to browse the catalog
-The a customer
-Needs to see products
+  In order to browse the catalog
+  The customer
+  Needs to see products
 
 Scenario: Featured Products
     Given the featured product "Adventure Works 20x30 Binoculars"

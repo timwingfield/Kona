@@ -11,7 +11,8 @@ Given /^customer order for "([^\"]*)"$/ do |product|
   OrderItem.create_item(order, product)
 end
 
-Given /^the featured product "([^\"]*)"$/ do |product|
+Given /^the featured product "([^\"]*)"$/ do |product_name|
+    Product.find_or_create product_name
 end
 
 Given /^the following "([^\"]*)":$/ do |category, products|
