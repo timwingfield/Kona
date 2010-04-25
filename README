@@ -1,14 +1,7 @@
-Kona
-====
+This is my fork of Ben Hall's Kona app to do some more exploratory .Net testing with IronRuby.
 
-This is a sample application created by TekPub.
+Not sure how much editing I'll do, but it was better to fork it just in case the urge to start changing it struck.
 
-I (Ben Hall) have taken this sample and used the base as a sample to explain how to Test ASP.net Web Applications using Ruby.
+The original app was by Rob Connery for TekPub
 
-For each presentation, I have created a branch and a tag. As a result, you can download the source code from the Downloads tab as a zip, instead of having to use Git.
-
-Any questions, please send me a message.
-
-Thanks
-
-Ben
+T-
